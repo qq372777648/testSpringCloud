@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: server-config #1应用名
+  profiles:
+    active: native #2 读本地配置文件（默认读git）
+    
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config #1本地配置路径
+    
+eureka:
+  instance:
+    non-secure-port: ${server.port:8888} #3
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value} #4
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/ #5
+

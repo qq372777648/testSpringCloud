@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: config
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: com.wisely
+Build-Jdk: 1.7.0_17
+Built-By: Administrator
+Created-By: Maven Integration for Eclipse
+Implementation-URL: https://projects.spring.io/spring-cloud/test-sprin
+ g-cloud/config
+

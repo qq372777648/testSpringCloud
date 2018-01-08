@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+#use config-server /config/service-hi.yml
+#use github config
+#server:
+#  port: 8767
+
+spring:
+  application:
+    name: service-hi
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: server-config
+        
+        #config server git config ,but unwork
+        #label: master 
+        #profile: dev
